@@ -18,7 +18,7 @@ fatcol = header.index("fat")
 weightcol = header.index("weight")
 
 outfile = open(settings.outputfile,'w')
-writer = csv.writer(outfile)
+writer = csv.writer(outfile,quoting=csv.QUOTE_ALL)
 
 writer.writerow(["Body"])
 
