@@ -26,7 +26,7 @@ outputheaders = ['Date','Weight','BMI','Fat']
 writer.writerow(outputheaders)
 
 for row in rows:
-        newrow = [row[datecol][0:10] , row[weightcol] , str(float(row[weightcol]) / heightsq), row[fatcol]]
+        newrow = [row[datecol][0:10] , row[weightcol] , (round(float(row[weightcol])/heightsq,2)), row[fatcol]]
         writer.writerow(newrow)
 
 outfile.close
